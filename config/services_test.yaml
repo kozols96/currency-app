@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\Tests\Mock\CurrencyApiMock:
+        decorates: 'currency_api_client'
+        decoration_inner_name: 'App\Tests\Mock\CurrencyApiMock.currency_api_client'
+        arguments: ['@.inner']
