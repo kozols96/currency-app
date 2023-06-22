@@ -19,14 +19,18 @@ const selectedCurrencyRateData = computed(() => {
 </script>
 
 <template>
-	<section v-if="data">
+	<section v-if="data?.data">
 		<h1 class="text-center my-5">{{ eurTo }} Exchange Rate</h1>
 		<select class="form-select mb-5" v-model="selectedCurrency">
 			<option v-for="currency in currencies" :key="currency">
 				{{ currency }}
 			</option>
 		</select>
-		<CurrencyRateTable :eur-to="eurTo" :selected-currency-data="selectedCurrencyRateData" />
+		<CurrencyRateTable
+			:eur-to="eurTo"
+			:selected-currency="selectedCurrency"
+			:selected-currency-data="selectedCurrencyRateData"
+		/>
 	</section>
 	<section v-else>
 		<h1 class="text-center my-5">Sorry, but currently the page is not working!</h1>
