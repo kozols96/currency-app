@@ -4,8 +4,6 @@ This app shows latest currency rates from EUR to USD daily basis.
 
 The app was developed with Symfony as REST API and with Nuxt.js as front-end interface!
 
-___
-
 ## Installation
 
 Before running this app, you must have:
